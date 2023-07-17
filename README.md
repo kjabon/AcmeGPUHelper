@@ -1,4 +1,4 @@
-Check out the companion [blog post](kjabon.github.io/blog/2023/AcmeIssues/).
+Check out the companion [blog post](http://kjabon.github.io/blog/2023/AcmeIssues/).
 
 # AcmeGPUHelper
 Acme, Deepmind's RL lib, does not parallelize using multiprocessing out of the box on custom setups. This repo has fixes for the issues I ran into. The crux of the problem lies in memory allocation. Depending on your training code, you will possibly use both JAX and Tensorflow, both of which will independently try to allocate memory for themselves.
